@@ -6,7 +6,9 @@ const authenticateToken = require('../middlewares/authMiddleware');
 
 router.post('/register',userController.registerUser);
 
-router.get('/activation',userController.userActivation);
+router.post('/activation',userController.checkUserActivation);
+
+router.post('/registerPassword',userController.updateRegisterPassword);
 
 router.post('/login',userController.loginUser);
 
